@@ -1,0 +1,451 @@
+*, 
+*:after,
+*:before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body{
+    font-family: "Roboto";
+    font-size: 100%;
+    list-style-type: none;
+}
+
+main.grid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "header header"
+    "nav nav"
+    "opening opening"
+    "aboutMe aboutMe"
+    "approach servicesCard"
+    "services services"
+    "middlePageCallToAction middlePageCallToAction"
+    "testimonials testimonials"
+    "ourSpace ourSpace"
+    "ourLocal ourLocal"
+    "footer footer";
+}
+
+header.info {
+    background-color:#70270E;
+    color: white;
+    font-weight: bold;
+
+
+    padding: 20px 0;
+    grid-area: header;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+header.info div.contactInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+header.info div.contactInfo p.telephoneNumber {
+    padding-right: 40px;
+}
+
+nav {
+    grid-area: nav;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+nav h1 {
+    padding: 40px;
+    font-size: 48px;
+}
+
+nav ul.navLinks {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding-bottom: 40px;
+}
+
+nav ul.navLinks li {
+    list-style-type: none;
+    padding: 10px;  
+}
+
+nav ul.navLinks li a {
+    animation: ease-in-out;
+    font-weight: bold;
+    color: #3F0F05;
+    transition: 0.2s all ease-in;
+}
+
+nav ul.navLinks li a:hover {
+    opacity: 0.6;
+}
+
+section.opening {
+    grid-area: opening;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+
+    padding: 60px 40px;
+    background-color: #3F0F05;
+    color: #ABA7A2;
+}
+
+section.opening div.openingImageArea {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right:20px;
+    width: 50%;
+}
+
+section.opening div.openingImageArea img {
+    width: 400px;
+}
+
+section.opening div.openingContent {
+    width: 50%;
+}
+
+section.opening div.openingContent h2.openingTitle {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+section.opening div.openingContent p.openingText {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+section.aboutMe {
+    grid-area: aboutMe;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    padding: 60px 40px;
+    background-color: #70270E;
+}
+
+section.aboutMe div.aboutMeContent {
+    max-width: 50%;
+}
+
+section.aboutMe div.aboutMeContent h3.aboutMeInfo {
+    color: #ABA7A2;
+    font-size: 25px;
+}
+
+section.aboutMe div.aboutMeContent h2.aboutMeTitle {
+    font-size: 50px;
+    padding: 20px 0;
+    color: white;
+}
+
+section.aboutMe div.aboutMeContent p.aboutMeText {
+    color: white;
+}
+
+section.aboutMe div.aboutMeImageArea {
+    max-width: 50%;
+    width: 50%;
+    margin-left: 20px;
+}
+
+section.aboutMe div.aboutMeImageArea img {
+    width: 500px;
+}
+
+section.approach {
+    grid-area: approach;
+
+    margin: 60px 0 60px 40px;
+}
+
+section.approach h3.approachInfo{
+    font-weight: normal;
+    font-size: 24px;
+    color: #525252;
+    text-transform: uppercase;
+}
+
+section.approach h2.approachTitle {
+    font-size: 50px;
+    color: #3F0F05;
+}
+
+section.approach p.approachText {
+    color: #525252;
+    margin: 20px 0;
+}
+
+section.approach div.approachAccordion div.accordion {
+    padding-bottom: 20px;
+}
+
+section.approach div.approachAccordion div.accordion div.accordionHeader {
+    display: flex;
+    border: solid 1px black;
+    padding: 5px;
+    transition: 300ms all ease;
+}
+
+section.approach div.approachAccordion div.accordion div.accordionHeader:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+section.approach div.approachAccordion div.accordion div.accordionHeader button {
+    margin: 0 20px;
+    padding: 0 5px;
+    background: white;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+section.approach div.approachAccordion div.accordion p {
+    transition: 200ms all ease-in-out;
+}
+
+section.approach div.approachAccordion div.accordion p.accordionBodyShowing {
+    padding: 10px;
+    border: solid 1px black;
+    }
+
+section.approach div.approachAccordion div.accordion p.accordionBodyHidden {
+    height: 0;
+    overflow: hidden;
+}
+
+
+aside.servicesCard {
+    grid-area: servicesCard;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;    
+    margin: 60px 40px 60px 20px;
+    max-height: 800px;
+}
+
+aside.servicesCard div.serviceCard {
+    width: 255px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+aside.servicesCard div.serviceCard:first-child {
+    margin-top: 30px;
+}
+
+aside.servicesCard div.serviceCard img {
+    width: 255px;
+    border-radius: 10px 10px 0 0;
+}
+
+aside.servicesCard div.serviceCard div.serviceCardDescription {
+    width: 255px;
+    padding: 20px;
+    border-radius: 0 0 10px 10px;
+}
+
+aside.servicesCard div.serviceCard:nth-child(odd) div.serviceCardDescription {
+    background-color: white;
+}
+
+aside.servicesCard div.serviceCard:nth-child(odd) div.serviceCardDescription h4 {
+    text-transform: uppercase;
+    color: #3F0F05;
+    font-size: 14px;
+}
+
+aside.servicesCard div.serviceCard:nth-child(odd) div.serviceCardDescription p {
+    padding-top: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 18px;
+    color: #70270E;
+}
+
+aside.servicesCard div.serviceCard:nth-child(even) div.serviceCardDescription {
+    background-color: #3F0F05;
+}
+
+aside.servicesCard div.serviceCard:nth-child(even) div.serviceCardDescription h4 {
+    text-transform: uppercase;
+    color: white;
+    font-size: 14px;
+}
+
+aside.servicesCard div.serviceCard:nth-child(even) div.serviceCardDescription p {
+    padding-top: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 18px;
+    color: white;
+}
+
+article.services {
+    grid-area: services;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 60px 40px 60px 40px;
+    background-color: #d3d3d3;
+}
+
+article.services div.service {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 40%;
+    padding: 10px 20px;
+    margin: 20px 40px;
+
+    background-color: white;
+
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+article.services div.service i{
+    padding-right: 10px;
+    color: #70270E;
+
+}
+
+article.services div.service div.serviceContent h3.serviceTitle {
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: #70270E;
+
+}
+
+article.services div.service div.serviceContent h3.serviceDescription {
+    font-size: 15px;
+}
+
+article.middlePageCallToAction {
+    grid-area: middlePageCallToAction;
+
+    margin: 60px 40px 60px 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+article.middlePageCallToAction div.middlePageCTAContent {
+    max-width: 50%;
+}
+
+article.middlePageCallToAction div.middlePageCTAContent h2 {
+    color: #D47539;
+}
+
+article.middlePageCallToAction button {
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+    background: #D47539;
+    border: none;
+    cursor: pointer;
+    transition: 400ms all ease-in;
+}
+
+article.middlePageCallToAction button:hover {
+    opacity: 0.6;
+}
+
+section.testimonials {
+    grid-area: testimonials;
+
+    padding: 60px 40px 60px 40px;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    background-color: #3F0F05;
+}
+
+section.testimonials h2 {
+    color: white;
+}
+
+section.testimonials div {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+
+
+section.testimonials div.testimonial {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    margin: 10px;
+    max-width: 30%;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    background-color: white;
+}
+
+section.testimonials div.testimonial ul.testimonialStarArea  {
+    list-style: none;
+}
+
+section.testimonials div.testimonial li img.testimonialStar {
+    width: 18px;
+}
+
+section.testimonials div.testimonial p.testimonialText {
+    font-size: 16px;
+    color: grey;
+    margin: 30px 0;
+}
+
+section.testimonials div.testimonial h3.testimonialName {
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+article.space {
+    grid-area: ourSpace;
+}
+article.local {
+    grid-area: ourLocal;
+}
+
+footer {
+    grid-area: footer;
+}

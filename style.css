@@ -28,11 +28,13 @@ main.grid {
     "testimonials testimonials"
     "ourSpace ourSpace"
     "ourLocal ourLocal"
-    "footer footer";
+    "faq faq"
+    "footer footer"
+    "rights rights";
 }
 
 header.info {
-    background-color:#70270E;
+    background-color:#CB6D31;
     color: white;
     font-weight: bold;
 
@@ -83,10 +85,13 @@ nav ul.navLinks li {
     padding: 10px;  
 }
 
+nav ul.navLinks li.navIcon {
+    display: none;
+}
 nav ul.navLinks li a {
     animation: ease-in-out;
     font-weight: bold;
-    color: #3F0F05;
+    color: #EA5F0D;
     transition: 0.2s all ease-in;
 }
 
@@ -103,7 +108,7 @@ section.opening {
     justify-content: space-around;
 
     padding: 60px 40px;
-    background-color: #3F0F05;
+    background-color: #EA5F0D;
     color: #ABA7A2;
 }
 
@@ -141,12 +146,23 @@ section.aboutMe {
     justify-content: space-around;
 
     padding: 60px 40px;
-    background-color: #70270E;
+    background-color: #CB6D31;
 }
 
 section.aboutMe div.aboutMeContent {
     max-width: 50%;
+    color: white;
 }
+
+section.aboutMe div.aboutMeContent > * {
+    padding-bottom: 10px;
+   
+}
+
+section.aboutMe div.aboutMeContent ul {
+    list-style: none;
+}
+
 
 section.aboutMe div.aboutMeContent h3.aboutMeInfo {
     color: #ABA7A2;
@@ -170,7 +186,7 @@ section.aboutMe div.aboutMeImageArea {
 }
 
 section.aboutMe div.aboutMeImageArea img {
-    width: 500px;
+    width: 400px;
 }
 
 section.approach {
@@ -188,7 +204,7 @@ section.approach h3.approachInfo{
 
 section.approach h2.approachTitle {
     font-size: 50px;
-    color: #3F0F05;
+    color: #EA5F0D;
 }
 
 section.approach p.approachText {
@@ -276,7 +292,7 @@ aside.servicesCard div.serviceCard:nth-child(odd) div.serviceCardDescription {
 
 aside.servicesCard div.serviceCard:nth-child(odd) div.serviceCardDescription h4 {
     text-transform: uppercase;
-    color: #3F0F05;
+    color: #EA5F0D;
     font-size: 14px;
 }
 
@@ -285,11 +301,11 @@ aside.servicesCard div.serviceCard:nth-child(odd) div.serviceCardDescription p {
     text-transform: uppercase;
     font-weight: bold;
     font-size: 18px;
-    color: #70270E;
+    color: #CB6D31;
 }
 
 aside.servicesCard div.serviceCard:nth-child(even) div.serviceCardDescription {
-    background-color: #3F0F05;
+    background-color: #EA5F0D;
 }
 
 aside.servicesCard div.serviceCard:nth-child(even) div.serviceCardDescription h4 {
@@ -333,14 +349,14 @@ article.services div.service {
 
 article.services div.service i{
     padding-right: 10px;
-    color: #70270E;
+    color: #CB6D31;
 
 }
 
 article.services div.service div.serviceContent h3.serviceTitle {
     margin-bottom: 20px;
     font-size: 20px;
-    color: #70270E;
+    color: #CB6D31;
 
 }
 
@@ -390,7 +406,7 @@ section.testimonials {
     flex-wrap: wrap;
     justify-content: space-around;
 
-    background-color: #3F0F05;
+    background-color: #EA5F0D;
 }
 
 section.testimonials h2 {
@@ -441,11 +457,313 @@ section.testimonials div.testimonial h3.testimonialName {
 
 article.space {
     grid-area: ourSpace;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
 }
-article.local {
-    grid-area: ourLocal;
+
+
+article.space div.ourSpace {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    width: 100%;
+}
+
+article.space div.ourSpace div.carousel {
+    display: flex;
+    width: 90%;
+    height: 400px;
+}
+
+article.space div.ourSpace div.carousel div.slick-list {
+    width: 100%;
+}
+
+article.space div.ourSpace div.carousel button.slick-prev {
+    height: 20px;
+    width: 20px;
+    margin: 0 10px;
+    align-self: center;
+    outline: none;
+    border: none;
+    background: transparent;
+    color: transparent;
+    font-weight: bolder;
+    line-height: 0;
+    padding: 0;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+article.space div.ourSpace div.carousel button.slick-prev:hover {
+    opacity: 0.7;
+}
+
+article.space div.ourSpace div.carousel button.slick-prev::before {
+   content: "<";
+   color: #EA5F0D;
+   font-size: 36px;
+}
+
+article.space div.ourSpace div.carousel button.slick-next {
+    height: 20px;
+    width: 20px;
+    margin: 0 10px;
+    align-self: center;
+    outline: none;
+    border: none;
+    background: transparent;
+    color: transparent;
+    font-weight: bolder;
+    line-height: 0;
+    padding: 0;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+article.space div.ourSpace div.carousel button.slick-next:hover {
+    opacity: 0.7;
+}
+
+article.space div.ourSpace div.carousel button.slick-next::before {
+   content: ">";
+   color: #EA5F0D;
+   font-size: 36px;
+}
+
+article.space div.ourSpace div.carousel div.slick-list div.slick-track div {
+    width: 360px;
+    height: 360px;
+    border-radius: 20px;
+    color: #d3d3d3;
+    margin-right: 20px;
+    background: #EA5F0D;
+}
+
+
+article.space div.ourSpace h2 {
+    font-size: 50px;
+    color: #CB6D31;
+}
+
+article.space div.ourSpace p {
+    margin: 20px 0;
+    color: #525252;
+}
+
+article.space div.local {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 40px;
+    border: 1px #D47539 dashed;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+article.space div.local div.localContent { 
+    padding-right: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+article.space div.local div.localContent h3 { 
+    color: #CB6D31;
+    margin-bottom: 20px;
+}
+
+article.space div.local div.localContent p { 
+    color: #525252;
+    margin-bottom: 20px;
+}
+
+article.space div.local div.localContent ul.contactIcons { 
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+
+article.space div.local div.localContent ul.contactIcons li { 
+    padding-right: 20px;
+    padding-left: 10px;
+    border-right: 1px solid #d3d3d3;
+    transition: 0.2s all ease;
+}
+
+article.space div.local div.localContent ul.contactIcons li:hover { 
+    opacity: 0.7;
+}
+
+article.space div.local div.localContent ul.contactIcons li img { 
+    width: 24px;
+}
+
+article.faq {
+    grid-area: faq;
 }
 
 footer {
     grid-area: footer;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+
+    padding: 60px 40px;
+    background-color: #EA5F0D;
+    color: #ABA7A2;
+}
+
+article.rights {
+    grid-area: rights;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+
+    padding: 10px 40px;
+    background-color: #CB6D31;
+    color: white;
+}
+
+@media screen and (max-width: 768px) {
+    main.grid {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "header"
+        "nav"
+        "opening"
+        "aboutMe"
+        "approach"
+        "servicesCard"
+        "services"
+        "middlePageCallToAction"
+        "testimonials"
+        "ourSpace"
+        "ourLocal"
+        "faq"
+        "footer"
+        "rights";
+    }
+
+    header.info {
+        display: none;
+    }
+
+    nav ul.navLinks li {
+        display: none;
+    }
+
+    nav ul.navLinks li.navIcon {
+        display: block;
+    }
+
+    section.opening {    
+        gap: 20px;
+        flex-direction: column;
+        padding: 40px 20px;
+    }
+    
+    section.opening div.openingContent {
+        width: auto;
+    }
+
+    section.opening h2{    
+        width: 100%;
+    }
+
+    section.aboutMe {
+        gap: 20px;
+        padding: 40px 20px;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    section.aboutMe div.aboutMeContent {
+        max-width: none;
+    }
+
+    section.aboutMe div.aboutMeImageArea {
+        display: flex;
+        justify-content: center;
+        max-width: none;
+        width: auto;
+        margin: 0;
+    }
+
+
+    section.approach {
+        margin: 0;
+        padding: 40px 20px;  
+    }
+
+    aside.servicesCard {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;    
+        margin: 0;
+        max-height: none;
+    }
+    
+    article.services {
+        grid-area: services;
+
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        padding: 0;
+        background-color: #d3d3d3;
+    }
+
+    article.services div.service {
+        max-width: none;
+    }
+
+    section.testimonials {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    section.testimonials div {
+        flex-direction: column;
+    }
+
+    section.testimonials div.testimonial {
+        max-width: none;
+    }
+
+    article.space {
+        padding: 20px 5px;
+    }    
+
+    article.space div.local {
+        display: flex;
+        flex-direction: column;
+    }
+
+    article.space div.local iframe {
+        margin-top: 20px;
+        width: 100%;
+
+    }
+
+    footer {
+        padding: 40px 20px;
+        gap: 10px;
+    }
+
+    footer div.footerLogo{        
+       display: none;
+    }
 }

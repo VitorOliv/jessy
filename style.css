@@ -109,7 +109,7 @@ section.opening {
 
     padding: 60px 40px;
     background-color: #EA5F0D;
-    color: #ABA7A2;
+    color: white;
 }
 
 section.opening div.openingImageArea {
@@ -131,6 +131,7 @@ section.opening div.openingContent {
 section.opening div.openingContent h2.openingTitle {
     font-size: 28px;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 section.opening div.openingContent p.openingText {
@@ -660,11 +661,114 @@ article.rights {
         display: none;
     }
 
+    nav ul.navLinks {
+        position: fixed;
+        top: 0;
+        right: -100vw;
+        width: 70vw;
+        height: 100vh;
+        background: #fff;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 60px 30px 0 30px;
+        box-shadow: -2px 0 8px rgba(0,0,0,0.08);
+        z-index: 1000;
+        transition: right 0.3s ease;
+    }
+    nav ul.navLinks.open {
+        right: 0;
+    }
+
     nav ul.navLinks li {
-        display: none;
+        display: block;
+        width: 100%;
+        padding: 18px 0;
+        border-bottom: 1px solid #eee;
+        text-align: left;
     }
 
     nav ul.navLinks li.navIcon {
+        display: block;
+        position: fixed;
+        top: 24px;
+        right: 24px;
+        z-index: 1100;
+        background: #fff;
+        border-radius: 50%;
+        width: 44px;
+        height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    nav ul.navLinks li.navIcon .fa {
+        font-size: 28px;
+        color: #EA5F0D;
+    }
+
+    nav ul.navLinks li.closeNav {
+        display: block;
+        position: absolute;
+        top: 18px;
+        right: 18px;
+        background: none;
+        border: none;
+        font-size: 32px;
+        color: #EA5F0D;
+        cursor: pointer;
+        z-index: 1200;
+    }
+
+    nav ul.navLinks li:not(.navIcon):not(.closeNav) {
+        display: block;
+    }
+
+    nav ul.navLinks li a {
+        color: #EA5F0D;
+        font-size: 20px;
+        font-weight: bold;
+        width: 100%;
+        display: block;
+    }
+
+    nav ul.navLinks li a:hover {
+        opacity: 0.6;
+    }
+
+    nav ul.navLinks li.navIcon {
+        /* Only show the menu icon outside the menu (not inside the open menu) */
+        position: fixed;
+        top: 24px;
+        right: 24px;
+        background: #fff;
+        border-radius: 50%;
+        width: 44px;
+        height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        z-index: 1100;
+    }
+
+    nav ul.navLinks.open li.navIcon {
+        display: none;
+    }
+
+    /* Overlay for mobile nav */
+    .mobile-nav-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0,0,0,0.3);
+        z-index: 900;
+    }
+    .mobile-nav-overlay.active {
         display: block;
     }
 

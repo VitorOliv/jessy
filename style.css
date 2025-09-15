@@ -117,7 +117,6 @@ section.opening div.openingImageArea {
     align-items: center;
     justify-content: center;
     margin-right:20px;
-    width: 50%;
 }
 
 section.opening div.openingImageArea img {
@@ -182,7 +181,6 @@ section.aboutMe div.aboutMeContent p.aboutMeText {
 
 section.aboutMe div.aboutMeImageArea {
     max-width: 50%;
-    width: 50%;
     margin-left: 20px;
 }
 
@@ -193,7 +191,8 @@ section.aboutMe div.aboutMeImageArea img {
 section.approach {
     grid-area: approach;
 
-    margin: 60px 0 60px 40px;
+    margin: 60px 40px 60px 40px;    
+
 }
 
 section.approach h3.approachInfo{
@@ -331,6 +330,7 @@ article.services {
     flex-direction: row;
     padding: 60px 40px 60px 40px;
     background-color: #d3d3d3;
+    justify-content: space-around;
 }
 
 article.services div.service {
@@ -348,14 +348,13 @@ article.services div.service {
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
-article.services div.service i{
+article.services div.service img{
     padding-right: 10px;
     color: #CB6D31;
-
 }
 
 article.services div.service div.serviceContent h3.serviceTitle {
-    margin-bottom: 20px;
+    margin-bottom: 5px;
     font-size: 20px;
     color: #CB6D31;
 
@@ -372,6 +371,7 @@ article.middlePageCallToAction {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-around;
 }
 
 article.middlePageCallToAction div.middlePageCTAContent {
@@ -382,7 +382,16 @@ article.middlePageCallToAction div.middlePageCTAContent h2 {
     color: #D47539;
 }
 
-article.middlePageCallToAction button {
+article.middlePageCallToAction div.buttonArea {
+    min-width: 30%;
+    min-height: 30%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+article.middlePageCallToAction div button {
     padding: 10px 20px;
     text-transform: uppercase;
     font-weight: bold;
@@ -392,6 +401,8 @@ article.middlePageCallToAction button {
     cursor: pointer;
     transition: 400ms all ease-in;
 }
+
+
 
 article.middlePageCallToAction button:hover {
     opacity: 0.6;

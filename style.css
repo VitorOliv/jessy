@@ -88,11 +88,16 @@ nav ul.navLinks li {
 nav ul.navLinks li.navIcon {
     display: none;
 }
+
 nav ul.navLinks li a {
     animation: ease-in-out;
     font-weight: bold;
     color: #EA5F0D;
     transition: 0.2s all ease-in;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center
 }
 
 nav ul.navLinks li a:hover {
@@ -560,7 +565,7 @@ article.space div.ourSpace div.carousel div.slick-list div.slick-track div {
 
 
 article.space div.ourSpace h2 {
-    font-size: 50px;
+    font-size: 40px;
     color: #CB6D31;
 }
 
@@ -714,6 +719,7 @@ article.rights {
         justify-content: center;
         box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     }
+
     nav ul.navLinks li.navIcon .fa {
         font-size: 28px;
         color: #EA5F0D;
@@ -733,14 +739,6 @@ article.rights {
     }
 
     nav ul.navLinks li:not(.navIcon):not(.closeNav) {
-        display: block;
-    }
-
-    nav ul.navLinks li a {
-        color: #EA5F0D;
-        font-size: 20px;
-        font-weight: bold;
-        width: 100%;
         display: block;
     }
 
@@ -793,6 +791,11 @@ article.rights {
         width: auto;
     }
 
+    section.opening div.openingImageArea img {
+        width: 300px;
+    }
+
+
     section.opening h2{    
         width: 100%;
     }
@@ -843,6 +846,16 @@ article.rights {
 
     article.services div.service {
         max-width: none;
+    }  
+
+    article.middlePageCallToAction {
+        flex-direction: column;
+        padding: 0;
+        gap: 20px;
+    }
+
+    article.middlePageCallToAction div.middlePageCTAContent {
+        max-width: 100%;
     }
 
     section.testimonials {
